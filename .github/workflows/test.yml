@@ -1,0 +1,29 @@
+# Nombre del workflow
+name: Animal Farm NodeJS CI
+# Definición de los eventos que desencadenarán el
+# workflow
+on:
+  # cuando alguien haga push sobre la rama main
+  push:
+    branches:
+      - main
+  # cuando alguien haga un pull request en la rama main
+  pull_request:
+    branches:
+      - main
+# Definición de lo que hacer en el workflow
+# Solo se define un job que hace build en un contenedor Docker
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '24.x'
+    - name: Run Yarn
+      run: yarn
+    - name: Run tests
+      run: yarn test
