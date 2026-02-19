@@ -36,6 +36,6 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags:
+        tags: |
           mapacheexe/animal-farm-nodejs:lastest
           ghcr.io/mapacheexe/animal-farm-nodejs:latest
