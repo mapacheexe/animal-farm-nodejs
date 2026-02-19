@@ -37,9 +37,5 @@ jobs:
         file: ./Dockerfile
         push: true
         tags:
-          # Sustituye
-          # - user por el usuario de Docker Hub
-          # - app por el nombre de la aplicación, por ejemplo animal-farmuser/app:latest
-          # Sustituye
-          # - user por tu usuario de GitHub
-          # - app por el nombre de la aplicación, por ejemplo animal-farmghcr.io/user/app:latest
+          mapacheexe/animal-farm-nodejs:lastest
+          ghcr.io/mapacheexe/animal-farm-nodejs:latest
